@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   demo-job:
@@ -13,10 +14,8 @@ jobs:
       - name: Say Hello
         run: echo "Hello, GitHub Actions Pipeline is running!"
 
-              - name: Check system
+      - name: Check system
         run: |
           uname -a
           df -h
           free -m
-
-        
