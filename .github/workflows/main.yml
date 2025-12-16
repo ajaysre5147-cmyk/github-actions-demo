@@ -12,3 +12,11 @@ jobs:
     steps:
       - name: Say Hello
         run: echo "Hello, GitHub Actions Pipeline is running!"
+
+              - name: Check system
+        run: |
+          uname -a
+          df -h
+          free -m
+
+        
