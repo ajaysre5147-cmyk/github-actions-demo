@@ -1,25 +1,4 @@
-name: First Pipeline
-
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
-
-jobs:
-  demo-job:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Say Hello
-        run: echo "Hello, GitHub Actions Pipeline is running!"
-
-      - name: Check system
-        run: |
-          uname -a
-          df -h
-          free -m
-          name: Deploy to EC2
+name: Deploy to EC2
 
 on:
   push:
@@ -49,4 +28,3 @@ jobs:
             uptime
             df -h
           EOF
-
